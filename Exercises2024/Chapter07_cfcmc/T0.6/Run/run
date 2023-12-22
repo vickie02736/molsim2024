@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cat > Input <<endofdata1
+Ncycle   Ninit   Npart     Linit   Lweight     LWL       LIT      Temp
+100000   100     256      .false.  .true.    .false.   .false.    0.6   
+Pdisp    Pswap   Pvol
+1        1       0.01
+Deltax   Deltav  Deltal
+0.2      20      0.8
+Box(1)   Box(2)
+12.5     12.5
+F_Modification       Flatness_Ratio       Reduction_Factor
+0.01                 0.4                     2.0  
+endofdata1
+
+time ../../Source/cfcmc.exe

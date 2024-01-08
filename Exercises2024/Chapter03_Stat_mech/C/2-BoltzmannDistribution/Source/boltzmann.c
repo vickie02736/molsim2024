@@ -33,22 +33,26 @@ int main(void)
   Beta=1.0/Temperature;
 
   // loop over all levels
-  Normalize=0.0;
+  Normalize=0.0; // Normalize is used to normalize the distribution
 
   for(i=0;i<NumberOfEnergyLevels;i++)
   {
-     tmp=exp(-Beta*i);
+    // tmp=exp(-Beta*i); // Beta is the inverse tempreture (1/Temperature)
+    // tmp=(i+1)*exp(-Beta*i); 
+    tmp=(2*i+1)*exp(-Beta*(0.5*i*(i+1))); 
 
      // start modification
 
      // end modification
 
-     Distribution[i]=tmp;
+     Distribution[i]=tmp; 
+     // Distribution array holds the distribution probabilities for each energy level.
+     
      Normalize+=tmp;
   }
 
   // Write Results 
-  FilePtr=fopen("results.dat","w");
+  FilePtr=fopen("results3.dat","w");
   for(i=0;i<NumberOfEnergyLevels;i++)
     fprintf(FilePtr,"%d %f\n",i,Distribution[i]/Normalize);
   fclose(FilePtr);

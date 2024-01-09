@@ -34,7 +34,7 @@ void Sample(int Option)
       // Start Modification
       Count += 1.0; // Count the number of samples
 
-      for (i = 0; i < NumberOfParticles -1; i++){
+      for (i = 0; i < NumberOfParticles-1; i++){
         for (j = i+1; j < NumberOfParticles; j++){
 
           // calculate distance between particles
@@ -49,15 +49,13 @@ void Sample(int Option)
 
           r2 = SQR(dr.x) + SQR(dr.y);
 
+          if (r2 < SQR(0.5*BOXSIZE))
+            Distribution[(int) (sqrt(r2)/Delta)] += 2.0;
+
         }
       }
       //Check if distance is smaller than the box size
-      if (r2 < SQR(BOXSIZE/2.0)){
-        // calculate the bin number
-        i = (int) (sqrt(r2)/Delta);
-        // increment the bin
-        Distribution[i] += 2.0;
-      }
+
       // End   Modification
       break;
     case WRITE_RESULTS:

@@ -4,6 +4,7 @@
 #include "system.h"
 
 #define MAXIMUM_NUMBER_OF_BINS 500
+#define M_PI 3.14159265358979323846
 
 // samples the radial distribution function
 void Sample(int Option)
@@ -31,7 +32,32 @@ void Sample(int Option)
       // See Frenkel/Smit p. 86
 
       // Start Modification
+      Count += 1.0; // Count the number of samples
 
+      for (i = 0; i < NumberOfParticles -1; i++){
+        for (j = i+1; j < NumberOfParticles; j++){
+
+          // calculate distance between particles
+          dr.x = Positions[i].x - Positions[j].x;
+          dr.y = Positions[i].y - Positions[j].y;
+
+          //apply periodic boundary conditions
+          if (PBC){
+            dr.x -= BOXSIZE*rint(dr.x/BOXSIZE);
+            dr.y -= BOXSIZE*rint(dr.y/BOXSIZE);
+          }
+
+          r2 = SQR(dr.x) + SQR(dr.y);
+
+        }
+      }
+      //Check if distance is smaller than the box size
+      if (r2 < SQR(BOXSIZE/2.0)){
+        // calculate the bin number
+        i = (int) (sqrt(r2)/Delta);
+        // increment the bin
+        Distribution[i] += 2.0;
+      }
       // End   Modification
       break;
     case WRITE_RESULTS:

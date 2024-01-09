@@ -5,6 +5,7 @@
 #include "ran_uniform.h"
 
 #define CycleMultiplication 1000
+#define M_PI 3.14159265358979323846
 
 #define SQR(x) ((x)*(x))
 
@@ -54,6 +55,14 @@ int main(void)
       // NumberOfHits  = number in the circle
 
       // Start Modifications
+      x = (RandomNumber() - 0.5) * ratio;
+      y = (RandomNumber() - 0.5) * ratio;
+
+      if(SQR(x) + SQR(y) <= 0.25)
+      {
+        NumberOfHits++;
+      }
+      NumberOfTrials ++;
 
       // End Modifications
        }

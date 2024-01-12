@@ -5,9 +5,7 @@
 
  
 // integrate the equations of motion and calculate the total impulse
-void Integrate(double Step,VECTOR *Momentum) 
-// Step: time step for simulation
-// Momentum: total impulse of the system
+void Integrate(double Step,VECTOR *Momentum)
 { 
   int i;
   double Scale;
@@ -18,18 +16,14 @@ void Integrate(double Step,VECTOR *Momentum)
   UKinetic=0.0;
   for(i=0;i<NumberOfParticles;i++)
   {
-    // new positions are calculated based on current and old positions 
-    // and the forces acting on each particle
     NewPositions[i].x=2.0*Positions[i].x-OldPositions[i].x+Forces[i].x*SQR(Deltat);
     NewPositions[i].y=2.0*Positions[i].y-OldPositions[i].y+Forces[i].y*SQR(Deltat);
     NewPositions[i].z=2.0*Positions[i].z-OldPositions[i].z+Forces[i].z*SQR(Deltat);
  
-    // velocities are calculated based on the new and old positions
     Velocities[i].x=(NewPositions[i].x-OldPositions[i].x)/(2.0*Deltat);
     Velocities[i].y=(NewPositions[i].y-OldPositions[i].y)/(2.0*Deltat);
     Velocities[i].z=(NewPositions[i].z-OldPositions[i].z)/(2.0*Deltat);
-
-    // the kinetic energy is accumulated
+ 
     UKinetic+=0.5*(SQR(Velocities[i].x)+SQR(Velocities[i].y)+SQR(Velocities[i].z));
   }
  
@@ -60,9 +54,9 @@ void Integrate(double Step,VECTOR *Momentum)
     (*Momentum).y+=Velocities[i].y;
     (*Momentum).z+=Velocities[i].z;
  
-    NewPositions[i].x=OldPositions[i].x+2*Velocities[i].x*Deltat;
-    NewPositions[i].y=OldPositions[i].y+2*Velocities[i].y*Deltat;
-    NewPositions[i].z=OldPositions[i].z+2*Velocities[i].z*Deltat;
+    NewPositions[i].x=OldPositions[i].x+Velocities[i].x*Deltat;
+    NewPositions[i].y=OldPositions[i].y+Velocities[i].y*Deltat;
+    NewPositions[i].z=OldPositions[i].z+Velocities[i].z*Deltat;
 
     PositionsNONPDB[i].x+=NewPositions[i].x-Positions[i].x;
     PositionsNONPDB[i].y+=NewPositions[i].y-Positions[i].y;
@@ -115,5 +109,5 @@ void Integrate(double Step,VECTOR *Momentum)
   }
  
   // add the kinetic part of the pressure
-  Pressure+=2.0*UKinetic*NumberOfParticles/(CUBE(Box)*(3.0*NumberOfParticles-3.0));
+  Pressure+=2.0*UKinetic*NumberOfParticles/(CUBE(Box)*(3.0*NumberOfParticles));
 }

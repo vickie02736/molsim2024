@@ -55,21 +55,7 @@ void SampleDiff(int Switch)
         // Frenkel/Smit. in this Way, you will have to think more... 
 
         // start modification
-        t0index=t0Counter%MAXT0;
-        t0Counter++;
-        t0time[t0index]=time;
 
-        // store particle positions and velocities 
-
-        for(i=0;i<NumberOfParticles;i++)
-        {
-          Rx0[i][t0index]=PositionsNONPDB[i].x;
-          Ry0[i][t0index]=PositionsNONPDB[i].y;
-          Rz0[i][t0index]=PositionsNONPDB[i].z;
-          Vxt0[i][t0index]=Velocities[i].x;
-          Vyt0[i][t0index]=Velocities[i].y;
-          Vzt0[i][t0index]=Velocities[i].z;
-        }
 
         // end modification
       }
@@ -77,22 +63,6 @@ void SampleDiff(int Switch)
       // loop over all time origins that have been stored
 
       // start modification
-      for(j=0;j<MIN(t0Counter,MAXT0);j++)
-      {
-        // calculate the time difference between the current time and the
-        // time origin
-        CorrelTime=time-t0time[j];
-        if(CorrelTime<MAXT)
-        {
-          // loop over all particles
-          for(i=0;i<NumberOfParticles;i++)
-          {
-            // calculate the velocity autocorrelation function
-            Vacf[CorrelTime]+=Velocities[i].x*Vxt0[i][j]+Velocities[i].y*Vyt0[i][j]+Velocities[i].z*Vzt0[i][j];
-            R2[CorrelTime]+=SQR(PositionsNONPDB[i].x-Rx0[i][j])+SQR(PositionsNONPDB[i].y-Ry0[i][j])+SQR(PositionsNONPDB[i].z-Rz0[i][j]);
-          }
-        }
-      }
 
       // end modification
       break;

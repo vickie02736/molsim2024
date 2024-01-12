@@ -8,10 +8,8 @@ C     Hard Disks On A Square; Random Placement  C
 Ccccccccccccccccccccccccccccccccccccccccccccccccc
 
       Integer          Nstep,I,J,n,k,Sstmm,Overlap,CycleMultiplication
-      Integer          BoxSize
       Double Precision Ran_Uniform,R2,NAttempted,NAccepted,M1,DX,DY
       
-      Parameter (BoxSize=10.0d0)
       Parameter (CycleMultiplication=1000)
 
 Cccccccccccccccccccccccccccccccccccccccccccc
@@ -95,6 +93,8 @@ Ccccccccccccccccccccccccccccccccc
             Endif
 
          Enddo
+
+         Call Writepdb
       Enddo
 
       If(NAccepted.Ge.0.5d0) Call Sample(3)

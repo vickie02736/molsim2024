@@ -54,13 +54,8 @@ Cccccccccccccccccccccccccccccccccccccccccccc
          Do J=1,CycleMultiplication
 
 C Start Modification
-            If(RandomNumber().Lt.0.5d0) Then
-               New = Old + 1
-            Else
-               New = Old - 1
-            Endif
 
-            If(New.Lt.0) New = 0
+
 C End   Modification
 
 Cccccccccccccccccccccccccccccc

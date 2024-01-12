@@ -1,3 +1,4 @@
+#include <stdio.h>
 int Adjust(int Attemp, int Nacc, double Dr, int AttemptVolume, int AcceptVolume, double Vmax, double Succ);
 int Ener(double *En, double *Vir, double R2, int BoxID);
 int Eneri(double Xi, double Yi, double Zi, int I, int Jb, double *En, double *Vir, int BoxID);

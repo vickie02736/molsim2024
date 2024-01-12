@@ -30,4 +30,4 @@ The C code is an implementation of the Mersenne Twister (MT19937) pseudorandom n
 
 5. **Boltzmann Distributed Velocity Generation**: The `RandomVelocity` function generates a random velocity value based on a given temperature parameter, following a Boltzmann distribution. This is particularly useful in physical simulations where particles are assumed to have velocities distributed according to their thermal energy.
 
-Your code effectively combines robust random number generation using the Mersenne Twister with applications to statistical distributions, making it suitable for simulations in physics, finance, and other fields where random sampling from these distributions is required.
+The code effectively combines robust random number generation using the Mersenne Twister with applications to statistical distributions, making it suitable for simulations in physics, finance, and other fields where random sampling from these distributions is required.

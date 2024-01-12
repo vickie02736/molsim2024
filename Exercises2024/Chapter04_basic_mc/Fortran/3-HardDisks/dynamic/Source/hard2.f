@@ -10,9 +10,8 @@ Ccccccccccccccccccccccccccccccccccccccccccccccccc
       Integer Nstep,I,J,n,k,Ipart,Pp,
      &     Ninit,Sstmm,CycleMultiplication,Overlap
       Double Precision Ran_Uniform,R2,NAttempted,NAccepted,Xn,Yn,
-     &     Dispmax,M1,DX,DY,BoxSize
+     &     Dispmax,M1,DX,DY
 
-      Parameter (BoxSize = 10.0d0)
       Parameter (CycleMultiplication = 1000)
       
 Cccccccccccccccccccccccccccccccccccccccccccc

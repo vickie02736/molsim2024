@@ -53,12 +53,6 @@ void Mdloop(void)
     // Start Modification
     // Choose a starting point to calculate the energy drift
     // Use Utot0
-    if(i==NumberOfInitializationSteps)
-      Utot0 = UTotal;
-
-    // Calculate the energy drift
-
-    dUtot += fabs((UTotal-Utot0)/Utot0);
 
 
     // End Modification

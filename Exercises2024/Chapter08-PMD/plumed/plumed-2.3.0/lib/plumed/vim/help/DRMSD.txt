@@ -1,0 +1,28 @@
+****************************************
+Short helpfile for action DRMSD
+****************************************
+
+The following arguments are compulsory: 
+
+              REFERENCE - a file in pdb format containing the reference structure and 
+                          the atoms involved in the CV. 
+           LOWER_CUTOFF - only pairs of atoms further than LOWER_CUTOFF are 
+                          considered in the calculation. 
+           UPPER_CUTOFF - only pairs of atoms closer than UPPER_CUTOFF are considered 
+                          in the calculation. 
+                   TYPE - ( default=DRMSD ) what kind of DRMSD would you like to 
+                          calculate. You can use either the normal DRMSD involving all the 
+                          distances between the atoms in your molecule. Alternatively, if you 
+                          have multiple molecules you can use the type INTER-DRMSD to 
+                          compute DRMSD values involving only those distances between the 
+                          atoms at least two molecules or the type INTRA-DRMSD to compute 
+                          DRMSD values involving only those distances between atoms in the 
+                          same molecule 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+

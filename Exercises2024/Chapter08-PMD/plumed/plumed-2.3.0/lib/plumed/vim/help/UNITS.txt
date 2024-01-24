@@ -1,0 +1,19 @@
+****************************************
+Short helpfile for action UNITS
+****************************************
+
+The following options are available
+
+                NATURAL - ( default=off ) use natural units 
+                 LENGTH - the units of lengths. Either specify a conversion factor 
+                          from the default, nm, or A (for angstroms) or um 
+                 ENERGY - the units of energy. Either specify a conversion factor 
+                          from the default, kj/mol, or use j/mol or kcal/mol 
+                   TIME - the units of time. Either specify a conversion factor from 
+                          the default, ps, or use ns or fs 
+                   MASS - the units of masses. Specify a conversion factor from the 
+                          default, amu 
+                 CHARGE - the units of charges. Specify a conversion factor from the 
+                          default, e 
+
+

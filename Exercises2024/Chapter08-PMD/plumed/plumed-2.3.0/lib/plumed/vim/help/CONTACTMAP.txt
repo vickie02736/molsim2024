@@ -1,0 +1,42 @@
+****************************************
+Short helpfile for action CONTACTMAP
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the atoms involved in each of the contacts you wish to 
+                          calculate. Keywords like ATOMS1, ATOMS2, ATOMS3,... should be listed 
+                          and one contact will be calculated for each ATOM keyword you 
+                          specify. You can use multiple instances of this keyword i.e. ATOMS1, 
+                          ATOMS2, ATOMS3... 
+
+The following arguments are compulsory: 
+
+                 SWITCH - The switching functions to use for each of the contacts in 
+                          your map. You can either specify a global switching function 
+                          using SWITCH or one switching function for each contact. Details 
+                          of the various switching functions you can use are provided on 
+                          \ref switchingfunction. You can use multiple instances of this 
+                          keyword i.e. SWITCH1, SWITCH2, SWITCH3... 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                    SUM - ( default=off ) calculate the sum of all the contacts in 
+                          the input 
+                 CMDIST - ( default=off ) calculate the distance with respect to the 
+                          provided reference contant map 
+                 SERIAL - ( default=off ) Perform the calculation in serial - for 
+                          debug purpose 
+              REFERENCE - A reference value for a given contact, by default is 0.0 
+                          You can either specify a global reference value using REFERENCE 
+                          or one reference value for each contact. You can use multiple 
+                          instances of this keyword i.e. REFERENCE1, REFERENCE2, REFERENCE3... 
+                 WEIGHT - A weight value for a given contact, by default is 1.0 You 
+                          can either specify a global weight value using WEIGHT or one 
+                          weight value for each contact. You can use multiple instances of 
+                          this keyword i.e. WEIGHT1, WEIGHT2, WEIGHT3... 
+
+

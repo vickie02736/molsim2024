@@ -27,7 +27,9 @@ void IntegrateBerendsen(void)
   //determine lambda
   Ekin = Velocity*Velocity;
   //begin modification
-
+  Berendsen = (Temperature-Ekin)*(Tstep/tau);
+  Stoch = 2.0*sqrt(Ekin*Temperature)*(Tstep/tau)*RandomNumber();
+  Scale = Berendsen + Stoch;
   //end modification
   lambda = sqrt((Ekin + Scale)/Ekin);
   

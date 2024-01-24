@@ -1,0 +1,18 @@
+****************************************
+Short helpfile for action RMSD
+****************************************
+
+The following arguments are compulsory: 
+
+              REFERENCE - a file in pdb format containing the reference structure and 
+                          the atoms involved in the CV. 
+                   TYPE - ( default=SIMPLE ) the manner in which RMSD alignment is 
+                          performed. Should be OPTIMAL or SIMPLE. 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                SQUARED - ( default=off ) This should be setted if you want MSD 
+                          instead of RMSD 
+

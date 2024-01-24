@@ -1,0 +1,12 @@
+****************************************
+Short helpfile for action GHOST
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the list of atoms which are involved the virtual atom's 
+                          definition. For more information on how to specify lists of atoms see 
+                          \ref Group 
+            COORDINATES - coordinates of the ghost atom in the local reference frame. 
+                          For more information on how to specify lists of atoms see \ref 
+                          Group 
+

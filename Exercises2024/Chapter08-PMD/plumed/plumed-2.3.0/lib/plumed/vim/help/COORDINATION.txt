@@ -1,0 +1,41 @@
+****************************************
+Short helpfile for action COORDINATION
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                 GROUPA - First list of atoms. For more information on how to specify 
+                          lists of atoms see \ref Group 
+                 GROUPB - Second list of atoms (if empty, N*(N-1)/2 pairs in GROUPA 
+                          are counted). For more information on how to specify lists of 
+                          atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+                     NN - ( default=6 ) The n parameter of the switching function 
+                     MM - ( default=0 ) The m parameter of the switching function; 0 
+                          implies 2*NN 
+                    D_0 - ( default=0.0 ) The d_0 parameter of the switching function 
+                    R_0 - The r_0 parameter of the switching function 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) Perform the calculation in serial - for 
+                          debug purpose 
+                   PAIR - ( default=off ) Pair only 1st element of the 1st group with 
+                          1st element in the second, etc 
+                  NLIST - ( default=off ) Use a neighbour list to speed up the 
+                          calculation 
+              NL_CUTOFF - The cutoff for the neighbour list 
+              NL_STRIDE - The frequency with which we are updating the atoms in the 
+                          neighbour list 
+                 SWITCH - This keyword is used if you want to employ an alternative 
+                          to the continuous swiching function defined above. The 
+                          following provides information on the \ref switchingfunction that are 
+                          available. When this keyword is present you no longer need the NN, MM, 
+                          D_0 and R_0 keywords. 
+
+

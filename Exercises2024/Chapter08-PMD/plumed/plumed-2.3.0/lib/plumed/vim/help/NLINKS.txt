@@ -1,0 +1,34 @@
+****************************************
+Short helpfile for action NLINKS
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  GROUP - . For more information on how to specify lists of atoms see 
+                          \ref Group 
+                 GROUPA - 
+                 GROUPB - 
+
+The following arguments are compulsory: 
+
+                     NN - ( default=6 ) The n parameter of the switching function 
+                     MM - ( default=0 ) The m parameter of the switching function; 0 
+                          implies 2*NN 
+                    D_0 - ( default=0.0 ) The d_0 parameter of the switching function 
+                    R_0 - The r_0 parameter of the switching function 
+
+In addition you may use the following options: 
+
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                 SWITCH - This keyword is used if you want to employ an alternative 
+                          to the continuous swiching function defined above. The 
+                          following provides information on the \ref switchingfunction that are 
+                          available. When this keyword is present you no longer need the NN, MM, 
+                          D_0 and R_0 keywords. 
+
+

@@ -1,0 +1,66 @@
+****************************************
+Short helpfile for action AROUND
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                   ATOM - the atom whose vicinity we are interested in examining. For 
+                          more information on how to specify lists of atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+                   DATA - The multicolvar that calculates the set of base quantities 
+                          that we are interested in 
+                  SIGMA - the width of the function to be used for kernel density 
+                          estimation 
+                 KERNEL - ( default=gaussian ) the type of kernel function to be used 
+                 XLOWER - ( default=0.0 ) the lower boundary in x relative to the x 
+                          coordinate of the atom (0 indicates use full extent of box). 
+                 XUPPER - ( default=0.0 ) the upper boundary in x relative to the x 
+                          coordinate of the atom (0 indicates use full extent of box). 
+                 YLOWER - ( default=0.0 ) the lower boundary in y relative to the y 
+                          coordinate of the atom (0 indicates use full extent of box). 
+                 YUPPER - ( default=0.0 ) the upper boundary in y relative to the y 
+                          coordinate of the atom (0 indicates use full extent of box). 
+                 ZLOWER - ( default=0.0 ) the lower boundary in z relative to the z 
+                          coordinate of the atom (0 indicates use full extent of box). 
+                 ZUPPER - ( default=0.0 ) the upper boundary in z relative to the z 
+                          coordinate of the atom (0 indicates use full extent of box). 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+                OUTSIDE - ( default=off ) calculate quantities for colvars that are 
+                          on atoms outside the region of interest 
+                   MEAN - take the mean of these variables. The final value can be 
+                          referenced using <em>label</em>.mean. You can use multiple instances 
+                          of this keyword i.e. MEAN1, MEAN2, MEAN3... The corresponding 
+                          values are then referenced using <em>label</em>.mean-1, 
+                          <em>label</em>.mean-2, <em>label</em>.mean-3... 
+              LESS_THAN - calculate the number of variables less than a certain 
+                          target value. 
+              MORE_THAN - calculate the number of variables more than a certain 
+                          target value. 
+                BETWEEN - calculate the number of values that are within a certain 
+                          range. These quantities are calculated using kernel density 
+                          estimation as described on \ref histogrambead. The final value can be 
+                          referenced using <em>label</em>.between. You can use multiple 
+                          instances of this keyword i.e. BETWEEN1, BETWEEN2, BETWEEN3... The 
+                          corresponding values are then referenced using <em>label</em>.between-1, 
+                          <em>label</em>.between-2, <em>label</em>.between-3... 
+              HISTOGRAM - calculate a discretized histogram of the distribution of 
+                          values. This shortcut allows you to calculates NBIN quantites like 
+                          BETWEEN. The final value can be referenced using 
+                          <em>label</em>.histogram. You can use multiple instances of this keyword i.e. 
+                          HISTOGRAM1, HISTOGRAM2, HISTOGRAM3... The corresponding values are then 
+                          referenced using <em>label</em>.histogram-1, 
+                          <em>label</em>.histogram-2, <em>label</em>.histogram-3... 
+
+

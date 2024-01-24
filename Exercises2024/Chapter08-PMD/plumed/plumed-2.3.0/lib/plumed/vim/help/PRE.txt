@@ -1,0 +1,36 @@
+****************************************
+Short helpfile for action PRE
+****************************************
+The input trajectory can be in any of the following formats: 
+
+              SPINLABEL - The atom to be used as the paramagnetic center.. For more 
+                          information on how to specify lists of atoms see \ref Group 
+                 GROUPA - the atoms involved in each of the contacts you wish to 
+                          calculate. Keywords like GROUPA1, GROUPA2, GROUPA3,... should be 
+                          listed and one contact will be calculated for each ATOM keyword 
+                          you specify. You can use multiple instances of this keyword 
+                          i.e. GROUPA1, GROUPA2, GROUPA3... 
+
+The following arguments are compulsory: 
+
+                  INEPT - is the INEPT time (in ms). 
+                   TAUC - is the correlation time (in ns) for this electron-nuclear 
+                          interaction. 
+                  OMEGA - is the Larmor frequency of the nuclear spin (in MHz). 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 ADDEXP - ( default=off ) Set to TRUE if you want to have fixed 
+                          components with the experimetnal values. 
+                   RTWO - The relaxation of the atom/atoms in the corresponding 
+                          GROUPA of atoms. Keywords like RTWO1, RTWO2, RTWO3,... should be 
+                          listed. You can use multiple instances of this keyword i.e. RTWO1, 
+                          RTWO2, RTWO3... 
+                 PREINT - Add an experimental value for each PRE. You can use 
+                          multiple instances of this keyword i.e. PREINT1, PREINT2, PREINT3... 
+
+

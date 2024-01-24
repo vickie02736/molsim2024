@@ -1,0 +1,8 @@
+****************************************
+Short helpfile for action LOAD
+****************************************
+
+The following arguments are compulsory: 
+
+                   FILE - file to be loaded 
+

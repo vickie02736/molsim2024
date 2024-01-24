@@ -10,5 +10,5 @@ set yrange [-0.5:2.5]
 set xlabel "cv.x"
 set ylabel "cv.y"
 
-splot 'fes.dat' using 1:2:($3-200) with pm3d t ''
+splot 'fes_999.dat' using 1:2:($3-200) with pm3d t ''
 

@@ -1,0 +1,28 @@
+****************************************
+Short helpfile for action TEMPLATE
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the keyword with which you specify what atoms to use should 
+                          be added like this. For more information on how to specify 
+                          lists of atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+    TEMPLATE_COMPULSORY - all compulsory keywords should be added like this with a 
+                          description here 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+TEMPLATE_DEFAULT_OFF_FLAG - ( default=off ) flags that are by default not performed 
+                          should be specified like this 
+TEMPLATE_DEFAULT_ON_FLAG - ( default=on ) flags that are by default performed should 
+                          be specified like this 
+      TEMPLATE_OPTIONAL - all optional keywords that have input should be added like 
+                          a description here 
+
+

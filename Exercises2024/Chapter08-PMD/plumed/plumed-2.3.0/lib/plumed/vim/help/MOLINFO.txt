@@ -1,0 +1,18 @@
+****************************************
+Short helpfile for action MOLINFO
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  CHAIN - (for masochists ( mostly Davide Branduardi ) ) The atoms 
+                          involved in each of the chains of interest in the structure.. For 
+                          more information on how to specify lists of atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+              STRUCTURE - a file in pdb format containing a reference structure. This 
+                          is used to defines the atoms in the various residues, chains, 
+                          etc . For more details on the PDB file format visit 
+                          http://www.wwpdb.org/docs.html 
+                MOLTYPE - ( default=protein ) what kind of molecule is contained in 
+                          the pdb file 
+

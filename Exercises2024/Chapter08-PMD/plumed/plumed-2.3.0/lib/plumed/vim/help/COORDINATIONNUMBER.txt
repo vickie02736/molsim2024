@@ -1,0 +1,87 @@
+****************************************
+Short helpfile for action COORDINATIONNUMBER
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                SPECIES - this keyword is used for colvars such as coordination 
+                          number. In that context it specifies that plumed should calculate 
+                          one coordination number for each of the atoms specified. Each 
+                          of these coordination numbers specifies how many of the other 
+                          specified atoms are within a certain cutoff of the central atom. You 
+                          can specify the atoms here as another multicolvar action or 
+                          using a MultiColvarFilter or ActionVolume action. When you do so 
+                          the quantity is calculated for those atoms specified in the 
+                          previous multicolvar. This is useful if you would like to calculate 
+                          the Steinhardt parameter for those atoms that have a 
+                          coordination number more than four for example 
+               SPECIESA - this keyword is used for colvars such as the coordination 
+                          number. In that context it species that plumed should calculate one 
+                          coordination number for each of the atoms specified in SPECIESA. Each of 
+                          these cooordination numbers specifies how many of the atoms 
+                          specifies using SPECIESB is within the specified cutoff. As with the 
+                          species keyword the input can also be specified using the label of 
+                          another multicolvar 
+               SPECIESB - this keyword is used for colvars such as the coordination 
+                          number. It must appear with SPECIESA. For a full explanation see 
+                          the documentation for that keyword 
+
+The following arguments are compulsory: 
+
+                     NN - ( default=6 ) The n parameter of the switching function 
+                     MM - ( default=0 ) The m parameter of the switching function; 0 
+                          implies 2*NN 
+                    D_0 - ( default=0.0 ) The d_0 parameter of the switching function 
+                    R_0 - The r_0 parameter of the switching function 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+                 SWITCH - This keyword is used if you want to employ an alternative 
+                          to the continuous swiching function defined above. The 
+                          following provides information on the \ref switchingfunction that are 
+                          available. When this keyword is present you no longer need the NN, MM, 
+                          D_0 and R_0 keywords. 
+                   MEAN - take the mean of these variables. The final value can be 
+                          referenced using <em>label</em>.mean. You can use multiple instances 
+                          of this keyword i.e. MEAN1, MEAN2, MEAN3... The corresponding 
+                          values are then referenced using <em>label</em>.mean-1, 
+                          <em>label</em>.mean-2, <em>label</em>.mean-3... 
+              MORE_THAN - calculate the number of variables more than a certain 
+                          target value. 
+              LESS_THAN - calculate the number of variables less than a certain 
+                          target value. 
+                    MAX - calculate the maximum value. 
+                    MIN - calculate the minimum value. 
+                BETWEEN - calculate the number of values that are within a certain 
+                          range. These quantities are calculated using kernel density 
+                          estimation as described on \ref histogrambead. The final value can be 
+                          referenced using <em>label</em>.between. You can use multiple 
+                          instances of this keyword i.e. BETWEEN1, BETWEEN2, BETWEEN3... The 
+                          corresponding values are then referenced using <em>label</em>.between-1, 
+                          <em>label</em>.between-2, <em>label</em>.between-3... 
+              HISTOGRAM - calculate a discretized histogram of the distribution of 
+                          values. This shortcut allows you to calculates NBIN quantites like 
+                          BETWEEN. The final value can be referenced using 
+                          <em>label</em>.histogram. You can use multiple instances of this keyword i.e. 
+                          HISTOGRAM1, HISTOGRAM2, HISTOGRAM3... The corresponding values are then 
+                          referenced using <em>label</em>.histogram-1, 
+                          <em>label</em>.histogram-2, <em>label</em>.histogram-3... 
+                MOMENTS - calculate the moments of the distribution of collective 
+                          variables. 
+                ALT_MIN - calculate the minimum value. 
+                 LOWEST - this flag allows you to recover the lowest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.lowest 
+                HIGHEST - this flag allows you to recover the highest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.highest 
+
+

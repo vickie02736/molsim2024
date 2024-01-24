@@ -1,0 +1,25 @@
+****************************************
+Short helpfile for action ERMSD
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the list of atoms (use @lcs-nn). For more information on 
+                          how to specify lists of atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+              REFERENCE - a file in pdb format containing the reference structure and 
+                          the atoms involved in the CV. 
+                 CUTOFF - ( default=2.4 ) only pairs of atoms closer than CUTOFF are 
+                          considered in the calculation. 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                  PAIRS - List of pairs considered. All pairs are considered if this 
+                          value is not specified. 
+
+

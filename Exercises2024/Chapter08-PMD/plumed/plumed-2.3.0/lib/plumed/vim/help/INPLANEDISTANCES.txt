@@ -1,0 +1,61 @@
+****************************************
+Short helpfile for action INPLANEDISTANCES
+****************************************
+The input trajectory can be in any of the following formats: 
+
+            VECTORSTART - The first atom position that is used to define the normal 
+                          to the plane of interest. For more information on how to 
+                          specify lists of atoms see \ref Group 
+              VECTOREND - The second atom position that is used to defin the normal 
+                          to the plane of interest. For more information on how to 
+                          specify lists of atoms see \ref Group 
+                  GROUP - The set of atoms for which you wish to calculate the in 
+                          plane distance 
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+                ALT_MIN - calculate the minimum value. 
+                 LOWEST - this flag allows you to recover the lowest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.lowest 
+                HIGHEST - this flag allows you to recover the highest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.highest 
+                   MEAN - take the mean of these variables. The final value can be 
+                          referenced using <em>label</em>.mean. You can use multiple instances 
+                          of this keyword i.e. MEAN1, MEAN2, MEAN3... The corresponding 
+                          values are then referenced using <em>label</em>.mean-1, 
+                          <em>label</em>.mean-2, <em>label</em>.mean-3... 
+                    MIN - calculate the minimum value. 
+                    MAX - calculate the maximum value. 
+              LESS_THAN - calculate the number of variables less than a certain 
+                          target value. 
+              MORE_THAN - calculate the number of variables more than a certain 
+                          target value. 
+                BETWEEN - calculate the number of values that are within a certain 
+                          range. These quantities are calculated using kernel density 
+                          estimation as described on \ref histogrambead. The final value can be 
+                          referenced using <em>label</em>.between. You can use multiple 
+                          instances of this keyword i.e. BETWEEN1, BETWEEN2, BETWEEN3... The 
+                          corresponding values are then referenced using <em>label</em>.between-1, 
+                          <em>label</em>.between-2, <em>label</em>.between-3... 
+              HISTOGRAM - calculate a discretized histogram of the distribution of 
+                          values. This shortcut allows you to calculates NBIN quantites like 
+                          BETWEEN. The final value can be referenced using 
+                          <em>label</em>.histogram. You can use multiple instances of this keyword i.e. 
+                          HISTOGRAM1, HISTOGRAM2, HISTOGRAM3... The corresponding values are then 
+                          referenced using <em>label</em>.histogram-1, 
+                          <em>label</em>.histogram-2, <em>label</em>.histogram-3... 
+                MOMENTS - calculate the moments of the distribution of collective 
+                          variables. 
+
+

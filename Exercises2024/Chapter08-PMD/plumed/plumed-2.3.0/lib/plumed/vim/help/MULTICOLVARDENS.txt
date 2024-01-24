@@ -1,0 +1,64 @@
+****************************************
+Short helpfile for action MULTICOLVARDENS
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                 ORIGIN - we will use the position of this atom as the origin. For 
+                          more information on how to specify lists of atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which the data should be 
+                          collected and added to the quantity being averaged 
+                  CLEAR - ( default=0 ) the frequency with which to clear all the 
+                          accumulated data. The default value of 0 implies that all the data will 
+                          be used and that the grid will never be cleared 
+              BANDWIDTH - the bandwidths for kernel density esimtation 
+                 KERNEL - ( default=gaussian ) the kernel function you are using. 
+                          More details on the kernels available in plumed plumed can be 
+                          found in \ref kernelfunctions. 
+                   DATA - the multicolvar which you would like to calculate the 
+                          density profile for 
+                    DIR - the direction in which to calculate the density profile 
+
+In addition you may use the following options: 
+
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+            UNORMALIZED - ( default=off ) output the unaveraged quantity/quantities. 
+             FRACTIONAL - ( default=off ) use fractional coordinates for the various 
+                          axes 
+               XREDUCED - ( default=off ) limit the calculation of the 
+                          density/average to a portion of the z-axis only 
+               YREDUCED - ( default=off ) limit the calculation of the 
+                          density/average to a portion of the y-axis only 
+               ZREDUCED - ( default=off ) limit the calculation of the 
+                          density/average to a portion of the z-axis only 
+             LOGWEIGHTS - list of actions that calculates log weights that should be 
+                          used to weight configurations when calculating averages 
+                  NBINS - the number of bins to use to represent the density profile 
+                SPACING - the approximate grid spacing (to be used as an alternative 
+                          or together with NBINS) 
+                 XLOWER - this is required if you are using XREDUCED. It specifes the 
+                          lower bound for the region of the x-axis that for which you are 
+                          calculating the density/average 
+                 XUPPER - this is required if you are using XREDUCED. It specifes the 
+                          upper bound for the region of the x-axis that for which you are 
+                          calculating the density/average 
+                 YLOWER - this is required if you are using YREDUCED. It specifes the 
+                          lower bound for the region of the y-axis that for which you are 
+                          calculating the density/average 
+                 YUPPER - this is required if you are using YREDUCED. It specifes the 
+                          upper bound for the region of the y-axis that for which you are 
+                          calculating the density/average 
+                 ZLOWER - this is required if you are using ZREDUCED. It specifes the 
+                          lower bound for the region of the z-axis that for which you are 
+                          calculating the density/average 
+                 ZUPPER - this is required if you are using ZREDUCED. It specifes the 
+                          upper bound for the region of the z-axis that for which you are 
+                          calculating the density/average 
+
+

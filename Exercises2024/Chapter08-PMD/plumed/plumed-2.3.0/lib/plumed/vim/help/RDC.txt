@@ -1,0 +1,32 @@
+****************************************
+Short helpfile for action RDC
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the couple of atoms involved in each of the bonds for which 
+                          you wish to calculate the RDC. Keywords like ATOMS1, ATOMS2, 
+                          ATOMS3,... should be listed and one dipolar coupling will be 
+                          calculated for each ATOMS keyword you specify. You can use multiple 
+                          instances of this keyword i.e. ATOMS1, ATOMS2, ATOMS3... 
+
+The following arguments are compulsory: 
+
+                  GYROM - Add the product of the gyromagnetic constants for the bond. 
+                  SCALE - Add the scaling factor to take into account concentration 
+                          and other effects. 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                    SVD - ( default=off ) Set to TRUE if you want to backcalculate 
+                          using Single Value Decomposition (need GSL at compilation time). 
+           ADDCOUPLINGS - ( default=off ) Set to TRUE if you want to have fixed 
+                          components with the experimetnal values. 
+               COUPLING - Add an experimental value for each coupling (needed by SVD 
+                          and usefull for ef STATS). You can use multiple instances of 
+                          this keyword i.e. COUPLING1, COUPLING2, COUPLING3... 
+
+

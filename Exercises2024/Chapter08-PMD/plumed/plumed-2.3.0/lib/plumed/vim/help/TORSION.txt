@@ -1,0 +1,22 @@
+****************************************
+Short helpfile for action TORSION
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the four atoms involved in the torsional angle 
+                   AXIS - two atoms that define an axis. You can use this to find the 
+                          angle in the plane perpendicular to the axis between the vectors 
+                          specified using the VECTOR1 and VECTOR2 keywords. 
+                VECTOR1 - two atoms that define a vector. You can use this in 
+                          combination with VECTOR2 and AXIS 
+                VECTOR2 - two atoms that define a vector. You can use this in 
+                          combination with VECTOR1 and AXIS 
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 COSINE - ( default=off ) calculate cosine instead of dihedral 
+

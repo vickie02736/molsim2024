@@ -1,0 +1,21 @@
+****************************************
+Short helpfile for action DISTANCE
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the pair of atom that we are calculating the distance 
+                          between. For more information on how to specify lists of atoms see 
+                          \ref Group 
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+             COMPONENTS - ( default=off ) calculate the x, y and z components of the 
+                          distance separately and store them as label.x, label.y and label.z 
+      SCALED_COMPONENTS - ( default=off ) calculate the a, b and c scaled components 
+                          of the distance separately and store them as label.a, label.b 
+                          and label.c 
+

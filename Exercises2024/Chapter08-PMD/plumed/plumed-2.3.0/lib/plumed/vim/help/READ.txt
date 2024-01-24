@@ -1,0 +1,27 @@
+****************************************
+Short helpfile for action READ
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which the file should be 
+                          read. 
+                  EVERY - ( default=1 ) only read every ith line of the colvar file. 
+                          This should be used if the colvar was written more frequently 
+                          than the trajectory. 
+                 VALUES - the values to read from the file 
+                   FILE - the name of the file from which to read these quantities 
+
+In addition you may use the following options: 
+
+            IGNORE_TIME - ( default=off ) ignore the time in the colvar file. When 
+                          this flag is not present read will be quite strict about the 
+                          start time of the simulation and the stride between frames 
+          IGNORE_FORCES - ( default=off ) use this flag if the forces added by any 
+                          bias can be safely ignored. As an example forces can be safely 
+                          ignored if you are doing postprocessing that does not involve 
+                          outputting forces 
+            UPDATE_FROM - Only update this action from this time 
+           UPDATE_UNTIL - Only update this action until this time 
+
+

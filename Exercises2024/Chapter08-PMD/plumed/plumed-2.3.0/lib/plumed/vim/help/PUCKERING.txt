@@ -1,0 +1,14 @@
+****************************************
+Short helpfile for action PUCKERING
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the five or six atoms of the sugar ring in the proper 
+                          order. For more information on how to specify lists of atoms see 
+                          \ref Group 
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+

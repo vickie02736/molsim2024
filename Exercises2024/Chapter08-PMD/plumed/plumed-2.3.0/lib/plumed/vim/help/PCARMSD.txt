@@ -1,0 +1,20 @@
+****************************************
+Short helpfile for action PCARMSD
+****************************************
+
+The following arguments are compulsory: 
+
+                AVERAGE - a file in pdb format containing the reference structure and 
+                          the atoms involved in the CV. 
+           EIGENVECTORS - a file in pdb format containing the reference structure and 
+                          the atoms involved in the CV. 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+           SQUARED-ROOT - ( default=off ) This should be setted if you want RMSD 
+                          instead of MSD 
+

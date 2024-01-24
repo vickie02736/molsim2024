@@ -1,0 +1,16 @@
+****************************************
+Short helpfile for action CONSTANT
+****************************************
+
+The following arguments are compulsory: 
+
+                 VALUES - ( default=NAN ) The values of the constants 
+                  VALUE - ( default=NAN ) The value of the constant 
+
+In addition you may use the following options: 
+
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                NODERIV - ( default=off ) Set to TRUE if you want values without 
+                          derivatives. 
+

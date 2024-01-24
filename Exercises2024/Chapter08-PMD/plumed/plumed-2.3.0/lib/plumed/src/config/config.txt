@@ -1,0 +1,73 @@
+# version strings
+# syntax: version short/long/git number
+version short 2.3
+version long 2.3.0
+version git Unknown
+
+# list of 'has' options
+# syntax: has name on/of
+# if option xx is on then plumed has beeen compiled with -D__PLUMED_HAS_XX
+has boost_graph off
+has clock_gettime on
+has cregex on
+has dlopen on
+has exceptions off
+has execinfo on
+has external_blas off
+has external_lapack off
+has external_molfile_plugins off
+has fftw off
+has gettimeofday on
+has gsl off
+has matheval off
+has molfile_plugins on
+has mpi off
+has readdir_r on
+has xdrfile off
+has zlib on
+
+# other defines
+# syntax: define name=value
+define HAVE_INTTYPES_H=1
+define HAVE_MEMORY_H=1
+define HAVE_STDINT_H=1
+define HAVE_STDLIB_H=1
+define HAVE_STRINGS_H=1
+define HAVE_STRING_H=1
+define HAVE_SYS_STAT_H=1
+define HAVE_SYS_TYPES_H=1
+define HAVE_UNISTD_H=1
+define NDEBUG=1
+define PACKAGE_BUGREPORT=""
+define PACKAGE_NAME="PLUMED"
+define PACKAGE_STRING="PLUMED 2"
+define PACKAGE_TARNAME="plumed"
+define PACKAGE_URL=""
+define PACKAGE_VERSION="2"
+define STDC_HEADERS=1
+define _REENTRANT=1
+
+# list of modules
+# syntax: module name on/off (default-on/default-off/always)
+module adjmat off (default-off)
+module analysis on (default-on)
+module bias on (default-on)
+module blas on (always)
+module cltools on (default-on)
+module colvar on (default-on)
+module core on (always)
+module crystallization off (default-off)
+module function on (default-on)
+module generic on (default-on)
+module gridtools on (always)
+module lapack on (always)
+module manyrestraints off (default-off)
+module mapping on (default-on)
+module molfile on (default-on)
+module multicolvar on (default-on)
+module reference on (always)
+module secondarystructure on (default-on)
+module setup on (default-on)
+module tools on (always)
+module vatom on (default-on)
+module vesselbase on (always)

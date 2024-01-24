@@ -1,0 +1,6 @@
+****************************************
+Short helpfile for action RANDOM_EXCHANGES
+****************************************
+                   SEED - seed for random exchanges 
+
+

@@ -1,0 +1,29 @@
+****************************************
+Short helpfile for action NOE
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                 GROUPA - the atoms involved in each of the contacts you wish to 
+                          calculate. Keywords like GROUPA1, GROUPA2, GROUPA3,... should be 
+                          listed and one contact will be calculated for each ATOM keyword 
+                          you specify. You can use multiple instances of this keyword 
+                          i.e. GROUPA1, GROUPA2, GROUPA3... 
+                 GROUPB - the atoms involved in each of the contacts you wish to 
+                          calculate. Keywords like GROUPB1, GROUPB2, GROUPB3,... should be 
+                          listed and one contact will be calculated for each ATOM keyword 
+                          you specify. You can use multiple instances of this keyword 
+                          i.e. GROUPB1, GROUPB2, GROUPB3... 
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 ADDEXP - ( default=off ) Set to TRUE if you want to have fixed 
+                          components with the experimental reference values. 
+                NOEDIST - Add an experimental value for each NOE. You can use 
+                          multiple instances of this keyword i.e. NOEDIST1, NOEDIST2, 
+                          NOEDIST3... 
+
+

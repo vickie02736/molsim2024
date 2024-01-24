@@ -1,0 +1,17 @@
+****************************************
+Short helpfile for action CENTER
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the list of atoms which are involved the virtual atom's 
+                          definition. For more information on how to specify lists of atoms see 
+                          \ref Group 
+
+The following options are available
+
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                   MASS - ( default=off ) If set center is mass weighted 
+                WEIGHTS - Center is computed as a weighted average. 
+
+

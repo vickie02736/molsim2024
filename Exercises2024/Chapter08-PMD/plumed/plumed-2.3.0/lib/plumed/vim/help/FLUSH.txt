@@ -1,0 +1,9 @@
+****************************************
+Short helpfile for action FLUSH
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - the frequency with which all the open files should be 
+                          flushed 
+

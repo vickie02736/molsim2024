@@ -1,0 +1,64 @@
+****************************************
+Short helpfile for action ANTIBETARMSD
+****************************************
+The input trajectory can be in any of the following formats: 
+
+               RESIDUES - this command is used to specify the set of residues that 
+                          could conceivably form part of the secondary structure. It is 
+                          possible to use residues numbers as the various chains and residues 
+                          should have been identified else using an instance of the \ref 
+                          MOLINFO action. If you wish to use all the residues from all the 
+                          chains in your system you can do so by specifying all. 
+                          Alternatively, if you wish to use a subset of the residues you can specify 
+                          the particular residues you are interested in as a list of 
+                          numbers. Please be aware that to form secondary structure elements 
+                          your chain must contain at least N residues, where N is 
+                          dependent on the particular secondary structure you are interested 
+                          in. As such if you define portions of the chain with fewer than 
+                          N residues the code will crash. 
+
+The following arguments are compulsory: 
+
+                   TYPE - ( default=DRMSD ) the manner in which RMSD alignment is 
+                          performed. Should be OPTIMAL, SIMPLE or DRMSD. For more details on the 
+                          OPTIMAL and SIMPLE methods see \ref RMSD. For more details on the 
+                          DRMSD method see \ref DRMSD. 
+                    R_0 - The r_0 parameter of the switching function. 
+                    D_0 - ( default=0.0 ) The d_0 parameter of the switching function 
+                     NN - ( default=8 ) The n parameter of the switching function 
+                     MM - ( default=12 ) The m parameter of the switching function 
+                  STYLE - ( default=all ) Antiparallel beta sheets can either form in 
+                          a single chain or from a pair of chains. If STYLE=all all 
+                          chain configuration with the appropriate geometry are counted. If 
+                          STYLE=inter only sheet-like configurations involving two chains are 
+                          counted, while if STYLE=intra only sheet-like configurations 
+                          involving a single chain are counted 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                VERBOSE - ( default=off ) write a more detailed output 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+              LESS_THAN - calculate the number of variables less than a certain 
+                          target value. 
+                    MIN - calculate the minimum value. 
+                ALT_MIN - calculate the minimum value. 
+                 LOWEST - this flag allows you to recover the lowest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.lowest 
+                HIGHEST - this flag allows you to recover the highest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.highest 
+         STRANDS_CUTOFF - If in a segment of protein the two strands are further 
+                          apart then the calculation of the actual RMSD is skipped as the 
+                          structure is very far from being beta-sheet like. This keyword speeds 
+                          up the calculation enormously when you are using the LESS_THAN 
+                          option. However, if you are using some other option, then this 
+                          cannot be used 
+
+

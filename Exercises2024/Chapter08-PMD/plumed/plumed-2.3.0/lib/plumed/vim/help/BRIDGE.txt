@@ -1,0 +1,39 @@
+****************************************
+Short helpfile for action BRIDGE
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the atoms involved in each of the collective variables you 
+                          wish to calculate. Keywords like ATOMS1, ATOMS2, ATOMS3,... 
+                          should be listed and one CV will be calculated for each ATOM 
+                          keyword you specify (all ATOM keywords should define the same 
+                          number of atoms). The eventual number of quantities calculated by 
+                          this action will depend on what functions of the distribution 
+                          you choose to calculate. You can use multiple instances of this 
+                          keyword i.e. ATOMS1, ATOMS2, ATOMS3... 
+         BRIDGING_ATOMS - The list of atoms that can form the bridge between the two 
+                          interesting parts of the structure. 
+                 GROUPA - The list of atoms that are in the first interesting part of 
+                          the structure 
+                 GROUPB - The list of atoms that are in the second interesting part 
+                          of the structure 
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+                 SWITCH - The parameters of the two \ref switchingfunction in the 
+                          above formula 
+                SWITCHA - The \ref switchingfunction on the distance between bridging 
+                          atoms and the atoms in group A 
+                SWITCHB - The \ref switchingfunction on the distance between the 
+                          bridging atoms and the atoms in group B 
+
+

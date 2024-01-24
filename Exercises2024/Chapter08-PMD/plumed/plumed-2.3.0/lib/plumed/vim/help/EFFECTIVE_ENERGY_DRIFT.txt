@@ -1,0 +1,21 @@
+****************************************
+Short helpfile for action EFFECTIVE_ENERGY_DRIFT
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) should be set to 1. Effective energy drift 
+                          computation has to be active at each step. 
+                   FILE - file on which to output the effective energy drift. 
+           PRINT_STRIDE - frequency to which output the effective energy drift on 
+                          FILE 
+
+In addition you may use the following options: 
+
+               ENSEMBLE - ( default=off ) Set to TRUE if you want to average over 
+                          multiple replicas. 
+                RESTART - allows per-action setting of restart (YES/NO/AUTO) 
+            UPDATE_FROM - Only update this action from this time 
+           UPDATE_UNTIL - Only update this action until this time 
+
+

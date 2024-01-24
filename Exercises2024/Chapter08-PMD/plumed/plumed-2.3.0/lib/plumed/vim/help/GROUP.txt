@@ -1,0 +1,20 @@
+****************************************
+Short helpfile for action GROUP
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the numerical indexes for the set of atoms in the group. 
+                          For more information on how to specify lists of atoms see \ref 
+                          Group 
+                 REMOVE - remove these atoms from the list. For more information on 
+                          how to specify lists of atoms see \ref Group 
+
+The following options are available
+
+                   SORT - ( default=off ) sort the resulting list 
+                 UNIQUE - ( default=off ) sort atoms and remove duplicated ones 
+               NDX_FILE - the name of index file (gromacs syntax) 
+              NDX_GROUP - the name of the group to be imported (gromacs syntax) - 
+                          first group found is used by default 
+
+

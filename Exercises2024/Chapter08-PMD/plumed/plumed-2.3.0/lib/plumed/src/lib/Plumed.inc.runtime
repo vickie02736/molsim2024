@@ -1,0 +1,3 @@
+# PLUMED: runtime installation
+PLUMED_LOAD= "/home/kewei/molsim2024/Exercises2024/Chapter08-PMD/plumed/plumed-2.3.0/lib/plumed/obj/Plumed.o" -ldl  
+PLUMED_DEPENDENCIES=

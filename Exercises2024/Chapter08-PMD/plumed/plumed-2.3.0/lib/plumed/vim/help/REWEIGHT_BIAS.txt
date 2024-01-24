@@ -1,0 +1,12 @@
+****************************************
+Short helpfile for action REWEIGHT_BIAS
+****************************************
+
+The following arguments are compulsory: 
+
+                    ARG - ( default=*.bias ) the biases that must be taken into 
+                          account when reweighting 
+                   TEMP - the system temperature. This is not required if your MD 
+                          code passes this quantity to PLUMED 
+
+

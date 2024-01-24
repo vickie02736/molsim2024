@@ -1,0 +1,31 @@
+****************************************
+Short helpfile for action INTERPOLATE_GRID
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which the data should be 
+                          collected and added to the quantity being averaged 
+                  CLEAR - ( default=0 ) the frequency with which to clear all the 
+                          accumulated data. The default value of 0 implies that all the data will 
+                          be used and that the grid will never be cleared 
+                   GRID - the action that creates the input grid you would like to 
+                          use 
+
+In addition you may use the following options: 
+
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+            UNORMALIZED - ( default=off ) output the unaveraged quantity/quantities. 
+             LOGWEIGHTS - list of actions that calculates log weights that should be 
+                          used to weight configurations when calculating averages 
+              COMPONENT - if your input is a vector field use this to specifiy the 
+                          component of the input vector field for which you wish to use 
+               GRID_BIN - the number of bins for the grid 
+           GRID_SPACING - the approximate grid spacing (to be used as an alternative 
+                          or together with GRID_BIN) 
+
+

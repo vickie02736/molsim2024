@@ -1,0 +1,25 @@
+****************************************
+Short helpfile for action DUMPMULTICOLVAR
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                 ORIGIN - You can use this keyword to specify the position of an atom 
+                          as an origin. The positions output will then be displayed 
+                          relative to that origin. For more information on how to specify 
+                          lists of atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+                   DATA - certain actions in plumed work by calculating a list of 
+                          variables and summing over them. This particular action can be used 
+                          to calculate functions of these base variables or prints them 
+                          to a file. This keyword thus takes the label of one of those 
+                          such variables as input. 
+                 STRIDE - ( default=1 ) the frequency with which the atoms should be 
+                          output 
+                   FILE - file on which to output coordinates 
+                  UNITS - ( default=PLUMED ) the units in which to print out the 
+                          coordinates. PLUMED means internal PLUMED units 
+              PRECISION - The number of digits in trajectory file 
+
+

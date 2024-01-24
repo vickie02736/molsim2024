@@ -1,0 +1,16 @@
+****************************************
+Short helpfile for action DUMPCUBE
+****************************************
+
+The following arguments are compulsory: 
+
+                   GRID - the action that creates the grid you would like to output 
+                 STRIDE - ( default=0 ) the frequency with which the grid should be 
+                          output to the file. The default value of 0 ensures that the grid 
+                          is only output at the end of the trajectory 
+                   FILE - ( default=density ) the file on which to write the grid. 
+                    FMT - the format that should be used to output real numbers 
+              COMPONENT - if your input is a vector field use this to specifiy the 
+                          component of the input vector field for which you wish to output 
+
+

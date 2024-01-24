@@ -1,0 +1,13 @@
+****************************************
+Short helpfile for action REWEIGHT_TEMP
+****************************************
+
+The following arguments are compulsory: 
+
+          REWEIGHT_TEMP - reweight data from a trajectory at one temperature and 
+                          output the probability distribution at a second temperature. This 
+                          is not possible during postprocessing. 
+                   TEMP - the system temperature. This is not required if your MD 
+                          code passes this quantity to PLUMED 
+
+

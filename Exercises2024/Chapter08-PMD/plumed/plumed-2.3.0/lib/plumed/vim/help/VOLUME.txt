@@ -1,0 +1,9 @@
+****************************************
+Short helpfile for action VOLUME
+****************************************
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+

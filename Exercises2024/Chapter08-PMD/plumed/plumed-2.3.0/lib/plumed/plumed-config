@@ -1,0 +1,8 @@
+#! /bin/bash
+echo 'NOTE: shell only version, useful when plumed is cross compiled' >&2
+export PLUMED_IS_INSTALLED=yes
+export PLUMED_ROOT="${PLUMED_ROOT-/home/kewei/molsim2024/Exercises2024/Chapter08-PMD/plumed/plumed-2.3.0/lib/plumed}"
+export PLUMED_INCLUDEDIR="${PLUMED_INCLUDEDIR-/home/kewei/molsim2024/Exercises2024/Chapter08-PMD/plumed/plumed-2.3.0/include}"
+export PLUMED_HTMLDIR="${PLUMED_HTMLDIR=/home/kewei/molsim2024/Exercises2024/Chapter08-PMD/plumed/plumed-2.3.0/share/doc/plumed}"
+export PLUMED_PROGRAM_NAME="${PLUMED_PROGRAM_NAME-plumed}"
+source "$PLUMED_ROOT"/scripts/config.sh

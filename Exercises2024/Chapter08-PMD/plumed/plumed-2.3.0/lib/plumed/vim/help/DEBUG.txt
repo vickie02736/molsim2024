@@ -1,0 +1,21 @@
+****************************************
+Short helpfile for action DEBUG
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which this action is to be 
+                          performed 
+
+In addition you may use the following options: 
+
+            logActivity - ( default=off ) write in the log which actions are inactive 
+                          and which are inactive 
+      logRequestedAtoms - ( default=off ) write in the log which atoms have been 
+                          requested at a given time 
+               NOVIRIAL - ( default=off ) switch off the virial contribution for the 
+                          entirity of the simulation 
+        DETAILED_TIMERS - ( default=off ) switch on detailed timers 
+                   FILE - the name of the file on which to output these quantities 
+
+

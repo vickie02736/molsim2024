@@ -1,0 +1,89 @@
+****************************************
+Short helpfile for action METAD
+****************************************
+
+The following arguments are compulsory: 
+
+                  SIGMA - the widths of the Gaussian hills 
+                   PACE - the frequency for hill addition 
+                   FILE - ( default=HILLS ) a file in which the list of added hills 
+                          is stored 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+            GRID_SPARSE - ( default=off ) use a sparse grid to store hills 
+          GRID_NOSPLINE - ( default=off ) don't use spline interpolation with grids 
+            STORE_GRIDS - ( default=off ) store all the grid files the calculation 
+                          generates. They will be deleted if this keyword is not present 
+            WALKERS_MPI - ( default=off ) Switch on MPI version of multiple walkers - 
+                          not compatible with other WALKERS_* options 
+           ACCELERATION - ( default=off ) Set to TRUE if you want to compute the 
+                          metadynamics acceleration factor. 
+                    ARG - the input for this action is the scalar output from one or 
+                          more other actions. The particular scalars that you will use are 
+                          referenced using the label of the action. If the label appears on its 
+                          own then it is assumed that the Action calculates a single 
+                          scalar value. The value of this scalar is thus used as the input 
+                          to this new action. If * or *.* appears the scalars calculated 
+                          by all the proceding actions in the input file are taken. Some 
+                          actions have multi-component outputs and each component of the 
+                          output has a specific label. For example a \ref DISTANCE action 
+                          labelled dist may have three componets x, y and z. To take just the 
+                          x component you should use dist.x, if you wish to take all 
+                          three components then use dist.*.More information on the 
+                          referencing of Actions can be found in the section of the manual on the 
+                          PLUMED \ref Syntax. Scalar values can also be referenced using 
+                          POSIX regular expressions as detailed in the section on \ref 
+                          Regex. To use this feature you you must compile PLUMED with the 
+                          appropriate flag. You can use multiple instances of this keyword i.e. 
+                          ARG1, ARG2, ARG3... 
+                 HEIGHT - the heights of the Gaussian hills. Compulsory unless TAU 
+                          and either BIASFACTOR or DAMPFACTOR are given 
+                    FMT - specify format for HILLS files (useful for decrease the 
+                          number of digits in regtests) 
+             BIASFACTOR - use well tempered metadynamics and use this biasfactor. 
+                          Please note you must also specify temp 
+             DAMPFACTOR - damp hills with exp(-max(V)/(kbT*DAMPFACTOR) 
+                 TARGET - target to a predefined distribution 
+                   TEMP - the system temperature - this is only needed if you are 
+                          doing well-tempered metadynamics 
+                    TAU - in well tempered metadynamics, sets height to 
+                          (kb*DeltaT*pace*timestep)/tau 
+               GRID_MIN - the lower bounds for the grid 
+               GRID_MAX - the upper bounds for the grid 
+               GRID_BIN - the number of bins for the grid 
+           GRID_SPACING - the approximate grid spacing (to be used as an alternative 
+                          or together with GRID_BIN) 
+      REWEIGHTING_NGRID - calculate the c(t) reweighting factor and use that to 
+                          obtain the normalized bias [rbias=bias-c(t)].Here you should 
+                          specify the number of grid points required in each dimension.The 
+                          number of grid points should be equal or larger to the number of 
+                          grid points given in GRID_BIN.This method is not compatible with 
+                          metadynamics not on a grid. 
+     REWEIGHTING_NHILLS - how many Gaussian hills should be deposited between 
+                          calculating the c(t) reweighting factor.The default is to do this every 
+                          50 hills. 
+           GRID_WSTRIDE - write the grid to a file every N steps 
+             GRID_WFILE - the file on which to write the grid 
+             GRID_RFILE - a grid file from which the bias should be read at the 
+                          initial step of the simulation 
+               ADAPTIVE - use a geometric (=GEOM) or diffusion (=DIFF) based hills 
+                          width scheme. Sigma is one number that has distance units or 
+                          timestep dimensions 
+             WALKERS_ID - walker id 
+              WALKERS_N - number of walkers 
+            WALKERS_DIR - shared directory with the hills files from all the walkers 
+        WALKERS_RSTRIDE - stride for reading hills files 
+               INTERVAL - monodimensional lower and upper limits, outside the limits 
+                          the system will not feel the biasing force. 
+              SIGMA_MAX - the upper bounds for the sigmas (in CV units) when using 
+                          adaptive hills. Negative number means no bounds 
+              SIGMA_MIN - the lower bounds for the sigmas (in CV units) when using 
+                          adaptive hills. Negative number means no bounds 
+                RESTART - allows per-action setting of restart (YES/NO/AUTO) 
+            UPDATE_FROM - Only update this action from this time 
+           UPDATE_UNTIL - Only update this action until this time 
+
+

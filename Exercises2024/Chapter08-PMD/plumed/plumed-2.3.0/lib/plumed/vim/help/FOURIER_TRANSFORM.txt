@@ -1,0 +1,41 @@
+****************************************
+Short helpfile for action FOURIER_TRANSFORM
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which the data should be 
+                          collected and added to the quantity being averaged 
+                  CLEAR - ( default=0 ) the frequency with which to clear all the 
+                          accumulated data. The default value of 0 implies that all the data will 
+                          be used and that the grid will never be cleared 
+                   GRID - the action that creates the input grid you would like to 
+                          use 
+     FOURIER_PARAMETERS - ( default=default ) what kind of normalization is applied 
+                          to the output and if the Fourier transform in FORWARD or 
+                          BACKWARD. This keyword takes the form FOURIER_PARAMETERS=A,B, where A 
+                          and B can be 0, 1 or -1. The default values are A=1 (no 
+                          normalization at all) and B=1 (forward FFT). Other possible choices for A 
+                          are: A=-1: normalize by the number of data, A=0: normalize by 
+                          the square root of the number of data (one forward and followed 
+                          by backward FFT recover the original data). 
+
+In addition you may use the following options: 
+
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+            UNORMALIZED - ( default=off ) output the unaveraged quantity/quantities. 
+             LOGWEIGHTS - list of actions that calculates log weights that should be 
+                          used to weight configurations when calculating averages 
+              COMPONENT - if your input is a vector field use this to specifiy the 
+                          component of the input vector field for which you wish to use 
+                FT_TYPE - choose what kind of data you want as output on the grid. 
+                          Possible values are: ABS = compute the complex modulus of Fourier 
+                          coefficients (DEFAULT); NORM = compute the norm (i.e. ABS^2) of Fourier 
+                          coefficients; COMPLEX = store the FFTW complex output on the grid (as a 
+                          vector). 
+
+

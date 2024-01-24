@@ -1,0 +1,70 @@
+****************************************
+Short helpfile for action ANGLES
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the atoms involved in each of the collective variables you 
+                          wish to calculate. Keywords like ATOMS1, ATOMS2, ATOMS3,... 
+                          should be listed and one CV will be calculated for each ATOM 
+                          keyword you specify (all ATOM keywords should define the same 
+                          number of atoms). The eventual number of quantities calculated by 
+                          this action will depend on what functions of the distribution 
+                          you choose to calculate. You can use multiple instances of this 
+                          keyword i.e. ATOMS1, ATOMS2, ATOMS3... 
+                  GROUP - Calculate angles for each distinct set of three atoms in 
+                          the group 
+                 GROUPA - A group of central atoms about which angles should be 
+                          calculated 
+                 GROUPB - When used in conjuction with GROUPA this keyword instructs 
+                          plumed to calculate all distinct angles involving one atom from 
+                          GROUPA and two atoms from GROUPB. The atom from GROUPA is the 
+                          central atom. 
+                 GROUPC - This must be used in conjuction with GROUPA and GROUPB. All 
+                          angles involving one atom from GROUPA, one atom from GROUPB and 
+                          one atom from GROUPC are calculated. The GROUPA atoms are 
+                          assumed to be the central atoms 
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+                   MEAN - take the mean of these variables. The final value can be 
+                          referenced using <em>label</em>.mean. You can use multiple instances 
+                          of this keyword i.e. MEAN1, MEAN2, MEAN3... The corresponding 
+                          values are then referenced using <em>label</em>.mean-1, 
+                          <em>label</em>.mean-2, <em>label</em>.mean-3... 
+              LESS_THAN - calculate the number of variables less than a certain 
+                          target value. 
+                BETWEEN - calculate the number of values that are within a certain 
+                          range. These quantities are calculated using kernel density 
+                          estimation as described on \ref histogrambead. The final value can be 
+                          referenced using <em>label</em>.between. You can use multiple 
+                          instances of this keyword i.e. BETWEEN1, BETWEEN2, BETWEEN3... The 
+                          corresponding values are then referenced using <em>label</em>.between-1, 
+                          <em>label</em>.between-2, <em>label</em>.between-3... 
+              HISTOGRAM - calculate a discretized histogram of the distribution of 
+                          values. This shortcut allows you to calculates NBIN quantites like 
+                          BETWEEN. The final value can be referenced using 
+                          <em>label</em>.histogram. You can use multiple instances of this keyword i.e. 
+                          HISTOGRAM1, HISTOGRAM2, HISTOGRAM3... The corresponding values are then 
+                          referenced using <em>label</em>.histogram-1, 
+                          <em>label</em>.histogram-2, <em>label</em>.histogram-3... 
+              MORE_THAN - calculate the number of variables more than a certain 
+                          target value. 
+                 SWITCH - A switching function that ensures that only angles between 
+                          atoms that are within a certain fixed cutoff are calculated. The 
+                          following provides information on the \ref switchingfunction that are 
+                          available. 
+                SWITCHA - A switching function on the distance between the atoms in 
+                          group A and the atoms in group B 
+                SWITCHB - A switching function on the distance between the atoms in 
+                          group A and the atoms in group B 
+
+

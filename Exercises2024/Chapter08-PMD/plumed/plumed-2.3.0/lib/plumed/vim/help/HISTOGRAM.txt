@@ -1,0 +1,54 @@
+****************************************
+Short helpfile for action HISTOGRAM
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which the data should be 
+                          collected and added to the quantity being averaged 
+                  CLEAR - ( default=0 ) the frequency with which to clear all the 
+                          accumulated data. The default value of 0 implies that all the data will 
+                          be used and that the grid will never be cleared 
+              BANDWIDTH - the bandwidths for kernel density esimtation 
+                 KERNEL - ( default=gaussian ) the kernel function you are using. 
+                          More details on the kernels available in plumed plumed can be 
+                          found in \ref kernelfunctions. 
+               GRID_MIN - the lower bounds for the grid 
+               GRID_MAX - the upper bounds for the grid 
+
+In addition you may use the following options: 
+
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+            UNORMALIZED - ( default=off ) output the unaveraged quantity/quantities. 
+             LOGWEIGHTS - list of actions that calculates log weights that should be 
+                          used to weight configurations when calculating averages 
+                    ARG - the input for this action is the scalar output from one or 
+                          more other actions. The particular scalars that you will use are 
+                          referenced using the label of the action. If the label appears on its 
+                          own then it is assumed that the Action calculates a single 
+                          scalar value. The value of this scalar is thus used as the input 
+                          to this new action. If * or *.* appears the scalars calculated 
+                          by all the proceding actions in the input file are taken. Some 
+                          actions have multi-component outputs and each component of the 
+                          output has a specific label. For example a \ref DISTANCE action 
+                          labelled dist may have three componets x, y and z. To take just the 
+                          x component you should use dist.x, if you wish to take all 
+                          three components then use dist.*.More information on the 
+                          referencing of Actions can be found in the section of the manual on the 
+                          PLUMED \ref Syntax. Scalar values can also be referenced using 
+                          POSIX regular expressions as detailed in the section on \ref 
+                          Regex. To use this feature you you must compile PLUMED with the 
+                          appropriate flag. You can use multiple instances of this keyword i.e. 
+                          ARG1, ARG2, ARG3... 
+                   DATA - input data from action with vessel and compute histogram 
+               GRID_BIN - the number of bins for the grid 
+           GRID_SPACING - the approximate grid spacing (to be used as an alternative 
+                          or together with GRID_BIN) 
+            UPDATE_FROM - Only update this action from this time 
+           UPDATE_UNTIL - Only update this action until this time 
+
+

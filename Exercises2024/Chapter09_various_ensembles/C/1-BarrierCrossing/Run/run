@@ -16,7 +16,7 @@
 
 set NSTEP     = 5000
 set NINIT     = 50
-set TEMP      = 0.05
+set TEMP      = 0.05 
 set TSTEP     = 0.01
 set CHOICE    = 3
 set NU        = 10.0
@@ -26,7 +26,7 @@ set NNOSHOVER = 1
 cat > input <<endofdata
 $NSTEP  $TEMP  $TSTEP    $NINIT
 $CHOICE $NU    $FREQNOS  $NNOSHOVER
-endofdata
+endofdata 
 time ../Source/barrier1.exe
 rm input
 exit

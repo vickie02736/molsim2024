@@ -1,0 +1,47 @@
+****************************************
+Short helpfile for action MTRANSFORM_BETWEEN
+****************************************
+
+The following arguments are compulsory: 
+
+                   DATA - The multicolvar that calculates the set of base quantities 
+                          that we are interested in 
+                  LOWER - the lower boundary for the range of interest 
+                  UPPER - the upper boundary for the range of interest 
+                  SMEAR - ( default=0.5 ) the ammount by which to smear the value for 
+                          kernel density estimation 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+                   MEAN - take the mean of these variables. The final value can be 
+                          referenced using <em>label</em>.mean. You can use multiple instances 
+                          of this keyword i.e. MEAN1, MEAN2, MEAN3... The corresponding 
+                          values are then referenced using <em>label</em>.mean-1, 
+                          <em>label</em>.mean-2, <em>label</em>.mean-3... 
+                MOMENTS - calculate the moments of the distribution of collective 
+                          variables. 
+                    MIN - calculate the minimum value. 
+                    MAX - calculate the maximum value. 
+                ALT_MIN - calculate the minimum value. 
+                 LOWEST - this flag allows you to recover the lowest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.lowest 
+                HIGHEST - this flag allows you to recover the highest of these 
+                          variables. The final value can be referenced using 
+                          <em>label</em>.highest 
+                   BEAD - This keywords is used if you want to employ an alternative 
+                          to the function defeind above. The following provides 
+                          information on the \ref histogrambead that are available. When this 
+                          keyword is present you no longer need the LOWER, UPPER and SMEAR 
+                          keywords. 
+
+

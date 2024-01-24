@@ -1,0 +1,34 @@
+****************************************
+Short helpfile for action DUMPFORCES
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which the forces should be 
+                          output 
+                   FILE - the name of the file on which to output the forces 
+                    FMT - ( default=%15.10f ) the format with which the derivatives 
+                          should be output 
+                    ARG - the input for this action is the scalar output from one or 
+                          more other actions. The particular scalars that you will use are 
+                          referenced using the label of the action. If the label appears on its 
+                          own then it is assumed that the Action calculates a single 
+                          scalar value. The value of this scalar is thus used as the input 
+                          to this new action. If * or *.* appears the scalars calculated 
+                          by all the proceding actions in the input file are taken. Some 
+                          actions have multi-component outputs and each component of the 
+                          output has a specific label. For example a \ref DISTANCE action 
+                          labelled dist may have three componets x, y and z. To take just the 
+                          x component you should use dist.x, if you wish to take all 
+                          three components then use dist.*.More information on the 
+                          referencing of Actions can be found in the section of the manual on the 
+                          PLUMED \ref Syntax. Scalar values can also be referenced using 
+                          POSIX regular expressions as detailed in the section on \ref 
+                          Regex. To use this feature you you must compile PLUMED with the 
+                          appropriate flag. You can use multiple instances of this keyword i.e. 
+                          ARG1, ARG2, ARG3... 
+                RESTART - allows per-action setting of restart (YES/NO/AUTO) 
+            UPDATE_FROM - Only update this action from this time 
+           UPDATE_UNTIL - Only update this action until this time 
+
+

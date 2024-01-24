@@ -1,0 +1,21 @@
+****************************************
+Short helpfile for action PROPERTYMAP
+****************************************
+
+The following arguments are compulsory: 
+
+                 LAMBDA - the lambda parameter is needed for smoothing, is in the 
+                          units of plumed 
+              REFERENCE - the pdb is needed to provide the various milestones 
+               PROPERTY - the property to be used in the indexing: this goes in the 
+                          REMARK field of the reference 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+             NEIGH_SIZE - size of the neighbor list 
+           NEIGH_STRIDE - how often the neighbor list needs to be calculated in time 
+                          units 
+
+

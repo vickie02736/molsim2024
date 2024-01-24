@@ -1,0 +1,34 @@
+****************************************
+Short helpfile for action DHENERGY
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                 GROUPA - First list of atoms. For more information on how to specify 
+                          lists of atoms see \ref Group 
+                 GROUPB - Second list of atoms (if empty, N*(N-1)/2 pairs in GROUPA 
+                          are counted). For more information on how to specify lists of 
+                          atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+                      I - ( default=1.0 ) Ionic strength (M) 
+                   TEMP - ( default=300.0 ) Simulation temperature (K) 
+                EPSILON - ( default=80.0 ) Dielectric constant of solvent 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) Perform the calculation in serial - for 
+                          debug purpose 
+                   PAIR - ( default=off ) Pair only 1st element of the 1st group with 
+                          1st element in the second, etc 
+                  NLIST - ( default=off ) Use a neighbour list to speed up the 
+                          calculation 
+              NL_CUTOFF - The cutoff for the neighbour list 
+              NL_STRIDE - The frequency with which we are updating the atoms in the 
+                          neighbour list 
+
+

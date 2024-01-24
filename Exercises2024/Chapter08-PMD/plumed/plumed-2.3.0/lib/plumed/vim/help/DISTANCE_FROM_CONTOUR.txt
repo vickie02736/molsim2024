@@ -1,0 +1,33 @@
+****************************************
+Short helpfile for action DISTANCE_FROM_CONTOUR
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                   ATOM - The atom whose perpendicular distance we are calculating 
+                          from the contour. For more information on how to specify lists 
+                          of atoms see \ref Group 
+
+The following arguments are compulsory: 
+
+                   DATA - The input base multicolvar which is being used to calculate 
+                          the contour 
+              BANDWIDTH - the bandwidths for kernel density esimtation 
+                 KERNEL - ( default=gaussian ) the kernel function you are using. 
+                          More details on the kernels available in plumed plumed can be 
+                          found in \ref kernelfunctions. 
+                    DIR - the direction perpendicular to the contour that you are 
+                          looking for 
+                CONTOUR - the value we would like for the contour 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+

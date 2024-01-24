@@ -1,0 +1,19 @@
+****************************************
+Short helpfile for action FIXEDATOM
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the list of atoms which are involved the virtual atom's 
+                          definition. For more information on how to specify lists of atoms see 
+                          \ref Group 
+
+The following arguments are compulsory: 
+
+                     AT - coordinates of the virtual atom 
+               SET_MASS - ( default=1 ) mass of the virtual atom 
+             SET_CHARGE - ( default=0 ) charge of the virtual atom 
+
+In addition you may use the following options: 
+
+      SCALED_COMPONENTS - ( default=off ) use scaled components 
+

@@ -1,0 +1,22 @@
+****************************************
+Short helpfile for action TARGET
+****************************************
+
+The following arguments are compulsory: 
+
+                   TYPE - ( default=EUCLIDEAN ) the manner in which the distance 
+                          should be calculated 
+              REFERENCE - a file in pdb format containing the reference structure. In 
+                          the PDB file the atomic coordinates and box lengths should be 
+                          in Angstroms unless you are working with natural units. If you 
+                          are working with natural units then the coordinates should be 
+                          in your natural length unit. The charges and masses of the 
+                          atoms (if required) should be inserted in the beta and occupancy 
+                          columns respectively. For more details on the PDB file format visit 
+                          http://www.wwpdb.org/docs.html 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+

@@ -1,0 +1,23 @@
+****************************************
+Short helpfile for action GYRATION
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the group of atoms that you are calculating the Gyration 
+                          Tensor for. For more information on how to specify lists of atoms 
+                          see \ref Group 
+
+The following arguments are compulsory: 
+
+                   TYPE - ( default=RADIUS ) The type of calculation relative to the 
+                          Gyration Tensor you want to perform 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+          MASS_WEIGHTED - ( default=off ) set the masses of all the atoms equal to 
+                          one 
+

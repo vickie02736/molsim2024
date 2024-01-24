@@ -1,0 +1,20 @@
+****************************************
+Short helpfile for action FRET
+****************************************
+The input trajectory can be in any of the following formats: 
+
+                  ATOMS - the pair of atom that we are calculating the distance 
+                          between. For more information on how to specify lists of atoms see 
+                          \ref Group 
+
+The following arguments are compulsory: 
+
+                     R0 - The value of the Forster radius. 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                  NOPBC - ( default=off ) ignore the periodic boundary conditions 
+                          when calculating distances 
+

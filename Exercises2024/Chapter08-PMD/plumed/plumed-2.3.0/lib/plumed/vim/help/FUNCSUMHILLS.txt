@@ -1,0 +1,54 @@
+****************************************
+Short helpfile for action FUNCSUMHILLS
+****************************************
+
+The following options are available
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+               ISCLTOOL - ( default=on ) use via plumed commandline: calculate at 
+                          read phase and then go 
+           PARALLELREAD - ( default=off ) read parallel HILLS file 
+                NEGBIAS - ( default=off ) dump negative bias ( -bias ) instead of the 
+                          free energy: needed in welltempered with flexible hills 
+              NOHISTORY - ( default=off ) to be used with INITSTRIDE: it splits the 
+                          bias/histogram in pieces without previous history 
+              MINTOZERO - ( default=off ) translate the resulting bias/histogram to 
+                          have the minimum to zero 
+                    ARG - the input for this action is the scalar output from one or 
+                          more other actions. The particular scalars that you will use are 
+                          referenced using the label of the action. If the label appears on its 
+                          own then it is assumed that the Action calculates a single 
+                          scalar value. The value of this scalar is thus used as the input 
+                          to this new action. If * or *.* appears the scalars calculated 
+                          by all the proceding actions in the input file are taken. Some 
+                          actions have multi-component outputs and each component of the 
+                          output has a specific label. For example a \ref DISTANCE action 
+                          labelled dist may have three componets x, y and z. To take just the 
+                          x component you should use dist.x, if you wish to take all 
+                          three components then use dist.*.More information on the 
+                          referencing of Actions can be found in the section of the manual on the 
+                          PLUMED \ref Syntax. Scalar values can also be referenced using 
+                          POSIX regular expressions as detailed in the section on \ref 
+                          Regex. To use this feature you you must compile PLUMED with the 
+                          appropriate flag. You can use multiple instances of this keyword i.e. 
+                          ARG1, ARG2, ARG3... 
+             HILLSFILES - source file for hills creation(may be the same as HILLS) 
+             HISTOFILES - source file for histogram creation(may be the same as 
+                          HILLS) 
+             HISTOSIGMA - sigmas for binning when the histogram correction is needed 
+                   PROJ - only with sumhills: the projection on the cvs 
+                     KT - only with sumhills: the kt factor when projection on cvs 
+               GRID_MIN - the lower bounds for the grid 
+               GRID_MAX - the upper bounds for the grid 
+               GRID_BIN - the number of bins for the grid 
+           GRID_SPACING - the approximate grid spacing (to be used as an alternative 
+                          or together with GRID_BIN) 
+               INTERVAL - set monodimensional INTERVAL 
+               OUTHILLS - output file for hills 
+               OUTHISTO - output file for histogram 
+             INITSTRIDE - stride if you want an initial dump 
+                 STRIDE - stride when you do it on the fly 
+                    FMT - the format that should be used to output real numbers 
+
+

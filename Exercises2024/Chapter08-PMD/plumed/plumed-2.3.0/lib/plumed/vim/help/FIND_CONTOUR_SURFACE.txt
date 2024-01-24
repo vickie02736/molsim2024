@@ -1,0 +1,33 @@
+****************************************
+Short helpfile for action FIND_CONTOUR_SURFACE
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which the data should be 
+                          collected and added to the quantity being averaged 
+                  CLEAR - ( default=0 ) the frequency with which to clear all the 
+                          accumulated data. The default value of 0 implies that all the data will 
+                          be used and that the grid will never be cleared 
+                   GRID - the action that creates the input grid you would like to 
+                          use 
+                CONTOUR - the value we would like to draw the contour at in the space 
+              SEARCHDIR - In which directions do you wish to search for the contour. 
+                 BUFFER - ( default=0 ) number of buffer grid points around location 
+                          where grid was found on last step. If this is zero the full grid 
+                          is calculated on each step 
+
+In addition you may use the following options: 
+
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                 LOWMEM - ( default=off ) lower the memory requirements 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+            UNORMALIZED - ( default=off ) output the unaveraged quantity/quantities. 
+             LOGWEIGHTS - list of actions that calculates log weights that should be 
+                          used to weight configurations when calculating averages 
+              COMPONENT - if your input is a vector field use this to specifiy the 
+                          component of the input vector field for which you wish to use 
+
+

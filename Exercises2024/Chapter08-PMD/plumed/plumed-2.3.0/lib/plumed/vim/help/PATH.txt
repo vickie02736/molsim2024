@@ -1,0 +1,26 @@
+****************************************
+Short helpfile for action PATH
+****************************************
+
+The following arguments are compulsory: 
+
+              REFERENCE - a pdb file containing the set of reference configurations 
+                   TYPE - ( default=OPTIMAL-FAST ) the manner in which distances are 
+                          calculated. More information on the different metrics that are 
+                          available in PLUMED can be found in the section of the manual on \ref 
+                          dists 
+                 LAMBDA - the value of the lambda parameter for paths 
+
+In addition you may use the following options: 
+
+  NUMERICAL_DERIVATIVES - ( default=off ) calculate the derivatives for these 
+                          quantities numerically 
+                 SERIAL - ( default=off ) do the calculation in serial. Do not 
+                          parallelize 
+                TIMINGS - ( default=off ) output information on the timings of the 
+                          various parts of the calculation 
+         DISABLE_CHECKS - ( default=off ) disable checks on reference input 
+                          structures. 
+                NOZPATH - ( default=off ) do not calculate the zpath position 
+                NOSPATH - ( default=off ) do not calculate the spath position 
+

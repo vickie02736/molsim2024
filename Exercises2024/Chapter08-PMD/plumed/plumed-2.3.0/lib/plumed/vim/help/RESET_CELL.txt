@@ -1,0 +1,12 @@
+****************************************
+Short helpfile for action RESET_CELL
+****************************************
+
+The following arguments are compulsory: 
+
+                 STRIDE - ( default=1 ) the frequency with which molecules are 
+                          reassembled. Unless you are completely certain about what you are doing 
+                          leave this set equal to 1! 
+                   TYPE - ( default=TRIANGULAR ) the manner in which the cell is 
+                          reset 
+
